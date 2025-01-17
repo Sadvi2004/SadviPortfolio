@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Code2, Palette, Target } from 'lucide-react';
+import aboutme from './pictures/about.avif';
 
 const About = () => {
   return (
@@ -65,7 +66,7 @@ const About = () => {
               className="mt-12 md:mt-0 flex justify-center"
             >
               <img
-                src="https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                src={aboutme}
                 alt="Developer"
                 className="rounded-2xl shadow-lg transition-shadow duration-300 object-cover"
               />
