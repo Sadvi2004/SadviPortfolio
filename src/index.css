@@ -1,89 +1,11 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-} */
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Smooth scrolling for better UX */
 html {
   scroll-behavior: smooth;
 }
 
-/* Apply global font-family */
 body {
   font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  /* Prevent horizontal scrolling */
-}
-
-/* Utility class for images */
-img {
-  max-width: 100%;
-  /* Ensure images are responsive */
-  height: auto;
-  display: block;
-  /* Prevent inline spacing issues */
-}
-
-/* Responsive text scaling */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  line-height: 1.2;
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-/* Add custom classes for responsive containers */
-.container {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1rem;
-  /* Add padding for small screens */
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
 }
