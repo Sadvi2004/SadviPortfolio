@@ -1,8 +1,30 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 import sadvi from './pictures/main-1.jpg';
+import { useEffect, useState } from 'react';
+// import { div } from 'framer-motion/client';
 
 const Home = () => {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setLoading(false);
+    }
+    fetchData();
+  }, []);
+  if (loading) {
+    return (
+      <div className='min-h-screen flex items-center justify-center bg-gray-900'>
+
+        <div
+          className="w-10 h-10 border-4 border-t-blue-500 border-gray-300 rounded-full animate-spin"
+        ></div>
+
+      </div>
+    );
+  }
   return (
     <div className="min-h-screen pt-16 bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

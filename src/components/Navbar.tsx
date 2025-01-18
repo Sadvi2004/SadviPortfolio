@@ -9,8 +9,8 @@ const Navbar = () => {
     <nav className="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <NavLink to="/" className="text-xl font-bold">Sadvi</NavLink>
-          
+          <NavLink to="/" className="text-xl font-bold">SB</NavLink>
+
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
               {['Home', 'About', 'Projects', 'Contact'].map((item) => (
@@ -18,8 +18,7 @@ const Navbar = () => {
                   key={item}
                   to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                   className={({ isActive }) =>
-                    `hover:text-purple-400 transition-colors ${
-                      isActive ? 'text-purple-400' : 'text-gray-300'
+                    `hover:text-purple-400 transition-colors ${isActive ? 'text-purple-400' : 'text-gray-300'
                     }`
                   }
                 >
@@ -41,21 +40,18 @@ const Navbar = () => {
               >
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${
-                    isOpen ? 'rotate-45' : '-translate-y-1.5'
-                  }`}
+                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : '-translate-y-1.5'
+                    }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${
-                    isOpen ? 'opacity-0' : 'opacity-100'
-                  }`}
+                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : 'opacity-100'
+                    }`}
                 ></span>
                 <span
                   aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${
-                    isOpen ? '-rotate-45' : 'translate-y-1.5'
-                  }`}
+                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : 'translate-y-1.5'
+                    }`}
                 ></span>
               </motion.div>
             </button>
@@ -77,8 +73,7 @@ const Navbar = () => {
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
                 className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 transition-colors ${
-                    isActive ? 'text-purple-400' : 'text-gray-300'
+                  `block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 transition-colors ${isActive ? 'text-purple-400' : 'text-gray-300'
                   }`
                 }
                 onClick={() => setIsOpen(false)}

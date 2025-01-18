@@ -1,28 +1,33 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github } from 'lucide-react';
+import project1 from './pictures/codehub.png';
+import project2 from './pictures/cssbattle.png';
+import project3 from './pictures/mixtube.png';
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'A web application built with React and Node.js',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80',
-    github: 'https://github.com/Sadvi2004',
-    demo: 'https://bsadvi2004.wixstudio.com/myportfolio'
+    title: 'CampusCodeHub',
+    description: 'A web application built with React and Node.js this application used to store user projects and can be downloaded at any time and teach us how to develop a basic website from scratch the student with specific college email id can able to log into it for further information click the icons below.',
+    // image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2015&q=80',
+    image: project1,
+    github: 'https://github.com/Sadvi2004/CampusCodeHub',
+    demo: 'https://campuscodehub.vercel.app/'
   },
   {
-    title: 'Project 2',
-    description: 'An e-commerce platform with modern design',
-    image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    github: 'https://github.com/Sadvi2004',
-    demo: 'https://bsadvi2004.wixstudio.com/myportfolio'
+    title: 'Frontend-Battel',
+    description: 'Discover the magic of CSS through hands-on challenges, interactive learning, and a supportive community.Step into a world where CSS learning is fun and engaging. CodeFE offers an immersive experience filled with exciting challenges and a playground to hone your front-end skills.Begin your journey toward CSS mastery today. Join our vibrant community!',
+    // image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    image: project2,
+    github: 'https://github.com/Sadvi2004/Frontend-battel',
+    demo: 'https://frontend-battel.vercel.app/'
   },
   {
-    title: 'Project 3',
-    description: 'A responsive portfolio website',
-    image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
-    github: 'https://github.com/Sadvi2004',
-    demo: 'https://bsadvi2004.wixstudio.com/myportfolio'
+    title: 'MixTube',
+    description: 'This application is a clone of the popular video streaming platform YouTube. It is built with React and the YouTube API. Users can search for videos, watch them it contains some default recommendations for users and it should not contain any ads while streaming, This application is fully responsive and works on all devices.',
+    // image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
+    image: project3,
+    github: 'https://github.com/Sadvi2004/MixTube',
+    demo: 'https://mix-tube-beta.vercel.app/'
   }
 ];
 
@@ -48,7 +53,7 @@ const Projects = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-48 object-cover"
+                  className="w-full h-48 object-fill"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
