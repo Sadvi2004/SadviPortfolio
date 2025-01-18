@@ -29,7 +29,7 @@ const About = () => {
                   className="p-6 bg-gray-800 rounded-lg"
                 >
                   <Code2 className="text-purple-400 mb-4" size={32} />
-                  <h3 className="text-xl font-semibold mb-2">Web Development</h3>
+                  <h3 className="text-xl font-semibold mb-2">Web Developer</h3>
                   <p className="text-gray-400">Creating responsive and dynamic web applications</p>
                 </motion.div>
                 {/* Card 2 */}
@@ -41,7 +41,7 @@ const About = () => {
                   className="p-6 bg-gray-800 rounded-lg"
                 >
                   <Palette className="text-purple-400 mb-4" size={32} />
-                  <h3 className="text-xl font-semibold mb-2">UI/UX Design</h3>
+                  <h3 className="text-xl font-semibold mb-2">UI/UX Designer</h3>
                   <p className="text-gray-400">Designing intuitive user interfaces</p>
                 </motion.div>
                 {/* Card 3 */}

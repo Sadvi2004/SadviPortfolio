@@ -9,74 +9,67 @@ const Navbar = () => {
     <nav className="fixed w-full bg-gray-900/90 backdrop-blur-sm z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <NavLink to="/" className="text-xl font-bold">SB</NavLink>
+          <NavLink to="/" className="text-xl font-bold text-gray-300">
+            SB
+          </NavLink>
 
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-8">
-              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-                <NavLink
-                  key={item}
-                  to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                  className={({ isActive }) =>
-                    `hover:text-purple-400 transition-colors ${isActive ? 'text-purple-400' : 'text-gray-300'
-                    }`
-                  }
-                >
-                  {item}
-                </NavLink>
-              ))}
-            </div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8">
+            {['Home', 'About', 'Projects', 'Contact'].map((item) => (
+              <NavLink
+                key={item}
+                to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `hover:text-purple-400 transition-colors ${isActive ? 'text-purple-400' : 'text-gray-300'
+                  }`
+                }
+              >
+                {item}
+              </NavLink>
+            ))}
           </div>
 
+          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white relative focus:outline-none"
-              style={{ width: '24px', height: '24px' }}
+              className="text-gray-300 hover:text-white focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
-              <motion.div
-                className="absolute w-4 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2"
-              >
+              {/* Hamburger Menu Icon */}
+              <motion.div className="relative w-6 h-6">
                 <span
-                  aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? 'rotate-45' : '-translate-y-1.5'
+                  className={`absolute block h-0.5 w-full bg-current transform transition duration-500 ease-in-out ${isOpen ? 'rotate-45 translate-y-2' : '-translate-y-1.5'
                     }`}
-                ></span>
+                />
                 <span
-                  aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : 'opacity-100'
+                  className={`absolute block h-0.5 w-full bg-current transform transition duration-500 ease-in-out ${isOpen ? 'opacity-0' : 'opacity-100'
                     }`}
-                ></span>
+                />
                 <span
-                  aria-hidden="true"
-                  className={`block absolute h-0.5 w-4 bg-current transform transition duration-500 ease-in-out ${isOpen ? '-rotate-45' : 'translate-y-1.5'
+                  className={`absolute block h-0.5 w-full bg-current transform transition duration-500 ease-in-out ${isOpen ? '-rotate-45 -translate-y-2' : 'translate-y-1.5'
                     }`}
-                ></span>
+                />
               </motion.div>
             </button>
           </div>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden"
+          className="md:hidden bg-gray-800 py-4"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="space-y-2">
             {['Home', 'About', 'Projects', 'Contact'].map((item) => (
               <NavLink
                 key={item}
                 to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                className={({ isActive }) =>
-                  `block px-3 py-2 rounded-md text-base font-medium hover:text-purple-400 transition-colors ${isActive ? 'text-purple-400' : 'text-gray-300'
-                  }`
-                }
                 onClick={() => setIsOpen(false)}
+                className="block px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors"
               >
                 {item}
               </NavLink>

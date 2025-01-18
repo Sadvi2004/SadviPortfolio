@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin, ExternalLink } from 'lucide-react';
 import sadvi from './pictures/main-1.jpg';
 import { useEffect, useState } from 'react';
-// import { div } from 'framer-motion/client';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
